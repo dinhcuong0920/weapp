@@ -1,30 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Web App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Smart Device Camera Template for HTML, CSS, JS and WebRTC">
+    <meta name="keywords" content="HTML,CSS,JavaScript, WebRTC, Camera">
+    <meta name="author" content="Kasper Kamperman">
+    <title>Mobile First Camera Template</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style rel="stylesheet" href="style.css"></style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Take picture</h1>
+    <div id="container" class="container">
+        <h1>Web app</h1>
         <div class="form-group">
-          <a href="index.html">Back</a>
-      </div>
+            <a href="index.html">Back</a>
+        </div>
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
-              <video id="video" autoplay="true" playsinline></video>
-              <div id="video_overlay"></div>
+                <div class="card">
+                    <div class="card-body" id="full_screen">
+                        <div id="vid_container">
+                            <canvas id="preview_snapshot" width="100px" height="100px" ></canvas>
+                            <video id="video" autoplay="true"></video>
+                            <div id="gui_controls" class="btn-group" role="group" aria-label="Basic example">
+                                <button id="switchCameraButton" class="btn btn-secondary" name="switch Camera"
+                                    type="button" aria-pressed="false">Swith</button>
+                                <button id="takePhotoButton" name="take Photo" class="btn btn-secondary"
+                                    type="button">SnapShot</button>
+                                <button id="toggleFullScreenButton" name="toggle FullScreen" class="btn btn-secondary"
+                                    type="button" aria-pressed="false">Full Scrrent</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Sent your image</label>
+                                    <div>
+                                        <input type="text" name="" hidden id="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="js/DetectRTC.min.js"></script>
+    <script src="js/adapter.min.js"></script>
+    <script src="js/screenfull.min.js"></script>
+    <script src="js/howler.core.min.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
-<script src="js/DetectRTC.min.js"></script>
-<script src="js/adapter.min.js"></script>
-<script src="js/screenfull.min.js"></script>
-<script src="js/howler.core.min.js"></script>
-<script src="app.js"></script>

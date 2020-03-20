@@ -40,6 +40,7 @@ $("input[name=face]").change(function(e) {
     reader.onloadend = function() {
          $("#preview_face").attr('src',reader.result)
     }
+    console.log(file);
     reader.readAsDataURL(file);
 });
 </script>

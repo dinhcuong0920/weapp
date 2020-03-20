@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#vid_container{
+    position: relative;
+}
+#preview_snapshot{
+    position: absolute;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+}
+
+#gui_controls{
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+}
+video{
+    width: 100%;
+}
+
+
+
+
+
